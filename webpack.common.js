@@ -7,7 +7,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({             // Html bundle plugin
-            template: './src/index.html'
+            template: './src/index.html',
+            favicon: "./src/icon.png"
         })
     ],
     module: {
