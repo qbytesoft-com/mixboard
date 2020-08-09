@@ -17,7 +17,7 @@ module.exports = {
                 use: ['html-loader'],   // Linked file load to the html
             },
             {
-                test: /\.(svg|png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|gif)$/i,
                 use: {
                     loader: "file-loader",      // Linked file load to the 'dist' folder
                     options: {
@@ -27,10 +27,11 @@ module.exports = {
                 }
             },
             {
-                test: /\.(eot|woff|woff2|ttf)$/i,
+                test: /\.(svg|eot|woff|woff2|ttf)$/i,
                 use: {
                     loader: "file-loader",          // Font file move to the 'dist' folder
                     options: {
+                        name: "[name].[ext]",
                         outputPath: "fonts"         // Path
                     }
                 }

@@ -10,6 +10,7 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "css-loader": "^4.2.1",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
