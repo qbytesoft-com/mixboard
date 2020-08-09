@@ -1,0 +1,22 @@
+// $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
+// @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+// @import '~@fortawesome/fontawesome-free/scss/solid.scss';
+// @import '~@fortawesome/fontawesome-free/scss/brands.scss';
+
+@import "./assets/sass/custom.scss",
+        "./assets/sass/component/aside", 
+        "./assets/sass/component/header",
+        "./assets/sass/component/main_content",
+        "./assets/sass/component/main_content_body", 
+        "./assets/sass/component/footer";
+
+// Custom style
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+@include media-breakpoint-down("sm"){
+  body{
+    font-size: 0.8rem;
+  }
+}

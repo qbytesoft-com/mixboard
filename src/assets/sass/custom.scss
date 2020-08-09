@@ -1,0 +1,69 @@
+$theme-colors: (
+  "primary": #597DFC,
+  "danger": #FF5F74,
+  "info" : #2FC1E1,
+  "warning" : #FF891C,
+  "success" : #60CE83
+);
+
+@import "~bootstrap/scss/bootstrap",
+        "./mixin/button-mixin",
+        "./mixin/dropdown",
+        "./mixin/form";
+
+// Custom class
+a{
+  text-decoration: none!important;
+}
+.bg-none{
+  background: none!important;
+}
+.border-none{
+  border: unset!important;
+}
+// Customize bootstrap component
+
+// Button
+.btn{
+    font-weight: 600!important;
+}
+.btn-success,.btn-outline-success,.btn-info,.btn-outline-info,.btn-warning,.btn-outline-warning{
+  color: $light!important;
+}
+@each $name,$color in $theme-colors {
+  @include customize_btn($name);
+}
+.btn-icon{
+  & .btn-icon_item{
+    display: inline-block;
+    font-size: 0.7rem;
+    text-align: center!important;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    border-radius: 1.5rem;
+    background: theme-color-level("primary",-1);
+    margin-right: 0.5rem;
+  }
+}
+
+// Dropdown
+.dropdown{
+  @include customize_dropdown;
+}
+
+// Form
+.form-control{
+  @include custom_form_input; 
+}
+.custom-select{
+  @include custom_form_input;
+  // background-image: url("../img/select_arow.png"); 
+  background-size: 1rem;
+  color: $secondary;
+  -webkit-appearance: none;
+}
+.input-group-text{
+  background:unset;
+  border: unset;
+}

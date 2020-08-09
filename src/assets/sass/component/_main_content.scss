@@ -1,0 +1,8 @@
+.main-content{
+    width: 100%;
+    z-index: 1;
+    .main-content__body{
+        min-height: 100vh;
+        background: theme-color-level("secondary",-12);
+    }
+}

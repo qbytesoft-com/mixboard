@@ -1,0 +1,8 @@
+@mixin custom_form_input {
+    border: unset;
+    font-weight: 600;
+    &:focus{
+        outline: 0;
+        box-shadow: 0 0 0 0.1rem theme-color-level("info",-6);
+    }
+}

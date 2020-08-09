@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mixboard</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/21f727c91f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="page-body">
+
+        <!-- Siderbar -->
+        <aside class="show">
+            <!-- Sidebar logo -->
+            <div class="sidebar-logo d-xl-none pt-3 text-center">
+                <a href="#" class="text-light font-weight-bold">
+                    <i class="fas fa-border-style"></i>
+                </a>
+            </div>
+
+            <div class="sidebar__content sidebar--primary">
+
+                <div class="sidebar-top d-none d-xl-flex justify-content-center pb-3">
+                    <a href="#" class="text-light font-weight-bold mx-auto">
+                        <i class="fas fa-border-style fa-lg mr-2"></i>
+                        mixboard
+                    </a>
+                </div>
+
+                <div class="sidebar-middle">
+
+                    <ul class="sidebar_nav">
+
+                        <li class="sidebar_nav_item">
+                            <a href="#" class="d-flex align-items-center text-light active">
+                                <i class="fas fa-home fa-lg mr-4"></i>
+                                <p class="m-0">Dashboard</p>
+                            </a>
+                        </li>
+
+                        <li class="sidebar_nav_item d-flex">
+                            <a href="#" class="d-flex align-items-center text-light">
+                                <i class="fas fa-briefcase fa-lg mr-4"></i>
+                                <p class="m-0">Jobs</p>
+                            </a>
+                        </li>
+
+                        <li class="sidebar_nav_item d-flex">
+                            <a href="#" class="d-flex align-items-center text-light">
+                                <i class="fas fa-user-friends fa-lg mr-4"></i>
+                                <p class="m-0">Candidates</p>
+                            </a>
+                        </li>
+
+                        <li class="sidebar_nav_item d-flex">
+                            <a href="#" class="d-flex align-items-center text-light">
+                                <i class="fas fa-cog fa-lg mr-4"></i>
+                                <p class="m-0">Settings</p>
+                            </a>
+                        </li>
+
+                        <li class="sidebar_nav_item d-flex">
+                            <a href="#" class="d-flex align-items-center text-light">
+                                <i class="far fa-file-alt fa-lg mr-4"></i>
+                                <p class="m-0">Question set</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="sidebar-bottom">
+                    <!-- Logout button -->
+                    <div class="logout-btn">
+                        <a href="#" class="d-flex align-items-center text-light">
+                            <i class="fas fa-sign-out-alt fa-lg mr-4"></i>
+                            <p class="m-0">Logout</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- Content area -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="main-content__header d-flex justify-content-between bg-white">
+                <!-- Header left -->
+                <div class="header-content-left d-flex">
+
+                    <button class="sidebar_toogle_btn btn btn-light py-1 px-2 py-md-2 px-md-3 mr-2 mr-md-4">
+                        <i class="fas fa-bars text-secondary"></i>
+                    </button>
+
+                    <a href="#" class="btn btn-info py-2 px-1 px-md-3 company_page_btn">View company page</a>
+
+                </div>
+
+                <!-- Header right -->
+                <div class="header-content-right d-flex">
+                    <!-- Language dropdown -->
+                    <div class="dropdown mr-1 mr-sm-2 mr-md-3 mr-lg-5">
+                        <button class="btn dropdown-toggle dropdown-btn" type="button" id="languageDropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>
+                                <img src="./assets/img/icons8-usa-48.png" alt="language_icon" class="language_icon">
+                                <span class="d-none d-sm-inline-block">
+                                    English
+                                </span>
+                            </span>
+                        </button>
+
+                        <div class="dropdown-menu header-dropdown-menu dropdown-menu-right"
+                            aria-labelledby="languageDropdown">
+                            <a class="dropdown-item" href="#">
+                                <span>
+                                    <img src="./assets/img/icons8-bangladesh-48.png" alt="language_icon"
+                                        class="language_icon mr-2">
+                                    Bangla
+                                </span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <span>
+                                    <img src="./assets/img/icons8-italy-48.png" alt="language_icon"
+                                        class="language_icon mr-2">
+                                    Italian
+                                </span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <span>
+                                    <img src="./assets/img/icons8-spain-flag-48.png" alt="language_icon"
+                                        class="language_icon mr-2">
+                                    Spanish
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Notification -->
+                    <div class="dropdown mr-1 mr-sm-2 mr-md-3 mr-lg-5">
+                        <button class="btn dropdown-toggle dropdown-btn dropdown-arrow-none py-2" type="button"
+                            id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bell text-primary notification_icon"></i>
+                        </button>
+
+                        <div class="dropdown-menu notification-dropdown-menu header-dropdown-menu dropdown-menu-right p-0"
+                            aria-labelledby="notificationDropdown">
+
+                            <div class="card border-none w-100">
+
+                                <div class="card-header d-flex justify-content-between bg-none">
+                                    <p class="card-title font-weight-bold text-secondary m-0">Notification</p>
+
+                                    <a href="#" class="text-secondary small">Clear all</a>
+                                </div>
+
+                                <div class="card-body">
+
+                                    <p class="card-text text-danger font-weight-bold text-center">No notification found
+                                    </p>
+
+                                    <div class="text-center mt-4">
+                                        <a href="#" class="btn btn-outline-info">View all</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Profile control -->
+                    <div class="dropdown mr-md-4">
+                        <button class="btn dropdown-toggle dropdown-btn bg-none" type="button"
+                            id="profileControlDropdown" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+
+                            <span class="font-weight-bold text-secondary">
+                                <img src="./assets/img/qbytsoft_logo.png" alt="company_logo" class="profile_thumbnail">
+                                <span class="d-none d-sm-inline-block">
+                                    Qbytesoft
+                                </span>
+                            </span>
+
+                        </button>
+
+                        <div class="dropdown-menu header-dropdown-menu dropdown-menu-right"
+                            aria-labelledby="profileControlDropdown">
+                            <a class="dropdown-item" href="#">
+                                <span>
+                                    <span class="profile-control-icon">
+                                        <i class="fas fa-plus fa-xs"></i>
+                                    </span>
+                                    New Company
+                                </span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <span>
+                                    <span class="profile-control-icon">
+                                        <i class="fas fa-cog fa-xs"></i>
+                                    </span>
+                                    My Account
+                                </span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <span>
+                                    <span class="profile-control-icon">
+                                        <i class="fas fa-sign-out-alt fa-xs"></i>
+                                    </span>
+                                    Logout
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- Body -->
+            <div class="main-content__body"></div>
+
+            <!-- Footer -->
+            <footer class="main-content__footer"></footer>
+
+        </main>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+@mixin customize_btn($color) {
+    .btn-#{$color}{
+        box-shadow: 0px 5px 10px 0px theme-color-level(#{$color},-5);
+        &:focus{
+            box-shadow: unset!important;
+        }
+    }
+}

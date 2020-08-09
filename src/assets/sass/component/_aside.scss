@@ -1,0 +1,153 @@
+@mixin sidebar_width_sm {
+  width: 50px;
+  min-width: 50px;
+}
+
+@mixin sidebar_width_md {
+  width: 80px;
+  min-width: 80px;
+}
+
+@mixin sidebar_width_lg{
+  width: 300px;
+  min-width: 300px;
+}
+
+@mixin sidebar_icon {
+  width: 3rem;
+  min-width: 3rem;
+  height: 3rem;
+  @include media-breakpoint-down("lg"){
+    width: 2.5rem;
+    min-width: 2.5rem;
+    height: 2.5rem;
+  }
+  border-radius: 5px;
+  background: theme-color-level("primary",-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+}
+@mixin sidebar_text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: theme-color-level("secondary",-9);
+}
+
+aside {
+  position: relative;
+  @include sidebar_width_md;
+  background: theme-color-level("primary", 0);
+  transition: all cubic-bezier(1, 0.2, 0.2, 1) 0.5s;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  &.show {
+    @include sidebar_width_lg;
+  }
+  @include media-breakpoint-down("lg") {
+    @include sidebar_width_sm;
+    &.show {
+      @include sidebar_width_sm;
+    }
+  }
+
+  .sidebar-logo{
+    position: fixed;
+    margin-left: 8px;
+    font-size: 2.5rem;
+  }
+  .sidebar__content{
+    position: fixed;
+    background: theme-color-level("primary",0);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all cubic-bezier(1, 0.2, 0.2, 1) 0.5s;
+    @include media-breakpoint-down("lg"){
+      top: 80px;
+      z-index: 999;
+    }
+    @include sidebar_width_lg;
+    & .sidebar-top{
+      padding-top: 20px;
+      transition: all cubic-bezier(1, 0.2, 0.2, 1) 0.5s;
+      & a{
+        width: 250px;
+        max-width: 280px;
+        font-size: 2rem;
+      }
+    }
+
+    & .sidebar-middle{
+      padding: 20px 20px;
+      transition: all cubic-bezier(1, 0.2, 0.2, 1) 0.5s;
+      & .sidebar_nav{
+        padding: 0;
+        margin: 0;
+        list-style: none!important;
+        & li{
+          margin-bottom: 1.5rem;
+          & a{
+            & i{
+              @include sidebar_icon;
+            }
+            & p{
+              @include sidebar_text;
+            }
+            &.active p{
+              color: $white;
+            }
+            &.active i{
+              background: $white;
+              color: theme-color-level("primary",0);
+            }
+          }
+        }
+      }
+    }
+
+    & .sidebar-bottom{
+      position: absolute;
+      bottom: 3rem;
+      padding: 20px 20px;
+      transition: all cubic-bezier(1, 0.2, 0.2, 1) 0.5s;
+      & .logout-btn{
+        & a{
+          & i{
+            @include sidebar_icon;
+          }
+          & p{
+            @include sidebar_text;
+          }
+          &.active p{
+            color: $white;
+          }
+          &.active i{
+            background: $white;
+            color: theme-color-level("primary",0);
+          }
+        }
+      }
+    }
+  }
+
+  &.show .sidebar-top{
+    padding: 20px 40px!important;
+  }
+  &.show .sidebar-middle,&.show .sidebar-bottom{
+    padding: 20px 25px;
+    @include media-breakpoint-down("lg"){
+      padding: 20px 5px;
+    }
+  }
+  &.show .sidebar__content{
+    @include media-breakpoint-down("lg"){
+      @include sidebar_width_sm;
+    }
+  }
+}
