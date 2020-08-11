@@ -32,7 +32,10 @@
         }
         .notification-dropdown-menu{
             width: 20rem;
-            margin-left: 4rem;
+            @include media-breakpoint-down("sm"){
+                width: 17rem;
+                margin-left: 4rem;
+            }
         }
         .profile_thumbnail,.language_icon{
             width: 2rem;
