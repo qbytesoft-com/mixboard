@@ -109,6 +109,11 @@ aside {
           }
         }
       }
+      // & .sidebar_nav_sub{
+      //   background: $white!important;
+      //   border-radius: 0.5rem;
+      //   padding: 0.5rem;
+      // }
     }
 
     & .sidebar-bottom{
@@ -150,4 +155,10 @@ aside {
       @include sidebar_width_sm;
     }
   }
+  // &.show .sidebar_nav_sub{
+  //   padding: 0.5rem;
+  //   @include media-breakpoint-down("lg"){
+  //     padding: 0.5rem!important;
+  //   }
+  // }
 }
